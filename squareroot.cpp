@@ -40,8 +40,8 @@ double morePrecision(int n,int precision,int tempSol)
         {
             ans = j;
         }
-        
      }
+     return ans;
 }
 int main ()
 {
@@ -50,7 +50,7 @@ int main ()
    cin>>n;
 
    int tempsol = sqrtInteger(n);
-   cout<<"Answer is "<< morePrecision(n,3,tempsol);
+   cout<<"Answer is "<< morePrecision(n,3,tempsol)<<endl;
 
    return 0;
 
