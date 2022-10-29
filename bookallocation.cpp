@@ -2,13 +2,13 @@
 
 using namespace std;
 
-    bool isPossible(int arr[],int n, int m, int mid)
+bool isPossible(int arr[],int n, int m, int mid)
 {
      int studentCount = 1;
      int pageSum = 0;
         
      for(int i=0 ;i<n;i++)
-      {
+       {
           if (pageSum + arr[i] <= mid)
            {
                 pageSum += arr[i];
@@ -17,13 +17,13 @@ using namespace std;
           {
            studentCount++;
            if(studentCount > m || arr[i] > mid)
-          {
-       return false;
-                }
+                 {
+               return false;
+                 }
                 pageSum = arr[i];
             }
         }
-        return true;
+    return true;
 }
     
     int findPages(int arr[], int n, int m) 
@@ -49,7 +49,7 @@ using namespace std;
             {
                 s = mid + 1;
             }
-            mid = s + (e-s)/2;
+         mid = s + (e-s)/2; 
         } 
-      return ans;        
-  }
+    return ans;        
+}
